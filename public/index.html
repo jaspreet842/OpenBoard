@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="optionsCont">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="toolsCont scaleTools">
+        <img class="pencil" src="icons/Pencil.svg" alt="">
+        <img class="eraser" src="icons/Eraser.svg" alt="">
+        <img class="download" src="icons/Download.svg" alt="">
+        <img class="upload" src="icons/Upload.svg" alt="">
+        <img class="sticky" src="icons/StickyNote.svg" alt="">
+        <img class="undo" src="icons/Undo.svg" alt="">
+        <img class="redo" src="icons/Redo.svg" alt="">
+    </div>
+    <div class="pencilToolCont">
+        <div class="pencilWidthCont">
+            <input type="range" min="2" max="10" value="3" class="pencilWidth">
+        </div>
+        <div class="pencilColorCont">
+            <div class="black pencilColor"></div>
+            <div class="red pencilColor"></div>
+            <div class="blue pencilColor"></div>
+        </div>
+    </div>
+    <div class="eraserToolCont">
+        <input type="range" min="2" max="50" value="10" class="eraserWidth">
+    </div>
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000");
+    </script>
+    <script src="tools.js"></script>
+    <script src="canvas.js"></script>
+</body>
+
+</html>
